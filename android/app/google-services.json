@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1018950458678",
+    "project_id": "new-live-f5ced",
+    "storage_bucket": "new-live-f5ced.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018950458678:android:d7a9ee8ce76216f9f6a797",
+        "android_client_info": {
+          "package_name": "com.example.new_life"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018950458678-9nm83j7bfr6h5n55cvhdec6bheanr2qh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2OWoUcr4VFmlLtRBtAdfeP--OLODxAzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018950458678-9nm83j7bfr6h5n55cvhdec6bheanr2qh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
