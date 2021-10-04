@@ -77,27 +77,26 @@ class _CollectorsState extends State<Collectors> {
       await ApiProvider.getConnection();
       if ((SpUtil.getBool('connectivity'))!) {
         resultScanSavedData = scanSavedData();
-        if (resultScanSavedData.length == 0) {
-          for (int i = 0; i < counter; i++) {
-            print('teeeeeeeeeeeeeeeeeeeeeeeeeeeeest$i');
-            SpUtil.putInt('counter', SpUtil.getInt('counter')! - 1);
-            SpUtil.remove('date$counter');
-            SpUtil.remove('username$counter');
-            SpUtil.remove('emlpoyename$counter');
-            SpUtil.remove('qest_id$counter');
-            SpUtil.remove('cust_code$counter');
-            SpUtil.remove('qest_val$counter');
-            SpUtil.remove('paid$counter');
-            SpUtil.remove('notes$counter');
-            SpUtil.remove('fann_ID$counter');
-            SpUtil.remove('fanni_Nm$counter');
-            SpUtil.remove('sent$counter');
-          }
-        }
-        print(resultScanSavedData.length);
         for (int i = 0; i < resultScanSavedData.length; i++) {
           await getAndSendData(resultScanSavedData[i]);
         }
+        for (int i = 0; i < counter; i++) {
+          print('teeeeeeeeeeeeeeeeeeeeeeeeeeeeest$i');
+          SpUtil.putInt('counter', SpUtil.getInt('counter')! - 1);
+          SpUtil.remove('date$counter');
+          SpUtil.remove('username$counter');
+          SpUtil.remove('emlpoyename$counter');
+          SpUtil.remove('qest_id$counter');
+          SpUtil.remove('cust_code$counter');
+          SpUtil.remove('qest_val$counter');
+          SpUtil.remove('paid$counter');
+          SpUtil.remove('notes$counter');
+          SpUtil.remove('fann_ID$counter');
+          SpUtil.remove('fanni_Nm$counter');
+          SpUtil.remove('sent$counter');
+        }
+
+        print(resultScanSavedData.length);
       }
       setState(() {
         print('leeeeeeeeeeeeeeeeeeeeeeeeeeeeeength');

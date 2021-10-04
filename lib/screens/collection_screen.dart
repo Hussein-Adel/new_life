@@ -83,10 +83,13 @@ class _CollectionScreenState extends State<CollectionScreen> {
               Collections[x].Confirmed == '0') {
             count++;
             total = total + int.parse(Collections[x].Cash);
+            total = total + int.parse(Collections[x].Paid_For_siana);
           } else if (Collections[i].Fanni_ID == Collections[x].Fanni_ID &&
               Collections[x].Confirmed == '1') {
             countConfirmed++;
             totalConfirmed = totalConfirmed + int.parse(Collections[x].Cash);
+            totalConfirmed =
+                totalConfirmed + int.parse(Collections[x].Paid_For_siana);
           }
         }
       }
