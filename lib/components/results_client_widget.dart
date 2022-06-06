@@ -193,6 +193,8 @@ class _ResultsClientWidgetState extends State<ResultsClientWidget> {
                                                               .Date,
                                                           code: Tanbeahat[index]
                                                               .Qest_ID,
+                                                          Siana_Code:
+                                                              "For Siana Code In User Model",
                                                           cash: Tanbeahat[index]
                                                               .Qest_Val,
                                                           maintenance: false,
@@ -250,6 +252,7 @@ class _ResultsClientWidgetState extends State<ResultsClientWidget> {
                                 name: widget.allUser[index].username,
                                 date: widget.allUser[index].date,
                                 code: widget.allUser[index].fanniName,
+                                Siana_Code: widget.allUser[index].Siana_Code,
                                 cash: widget.allUser[index].phone,
                                 maintenance: false,
                                 client: true,

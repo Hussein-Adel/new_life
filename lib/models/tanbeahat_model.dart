@@ -9,7 +9,7 @@ class TanbeahatModel {
   late String Mokadima;
   late String QestNumber;
   late String InvTot;
-
+  late String PaidDate;
   TanbeahatModel({
     required this.Cust_ID,
     required this.Custname,
@@ -21,6 +21,7 @@ class TanbeahatModel {
     required this.Mokadima,
     required this.QestNumber,
     required this.InvTot,
+    required this.PaidDate,
   });
   TanbeahatModel.fromJson(Map<String, dynamic> json) {
     Date = json['DateOfDue'].toString();
@@ -33,6 +34,7 @@ class TanbeahatModel {
     Mokadima = json['Mokadima'].toString();
     QestNumber = json['QestID'].toString();
     InvTot = json['InvTot'].toString();
+    PaidDate = json['PaidDate'].toString();
   }
 
   Map<String, dynamic> toJson() {
@@ -44,6 +46,7 @@ class TanbeahatModel {
     data['Cash'] = this.Qest_Val;
     data['Paid'] = this.Cash;
     data['AlarmState'] = this.State;
+    data['PaidDate'] = this.PaidDate;
     return data;
   }
 }

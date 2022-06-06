@@ -158,11 +158,10 @@ class Users {
     try {
       var data = await ApiProvider()
           .getRequest("${ServerVars.getLoginId}" + '?gmail=$gmail', true);
-      print('hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh');
+      print('hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh0');
       var x = jsonDecode(data);
       print(x.toString() == '[]');
-      print('hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh');
-
+      print('hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh1');
       List<String> User = [];
       if (x.toString() != '[]') {
         var Id = jsonDecode(data)[0]['id'];
@@ -229,6 +228,9 @@ class Users {
       if (Users != null) {
         for (var data in Users) {
           allUser.add(CustomerModel.fromJson(data));
+          print("heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeer787878");
+          print(allUser.length);
+          print("heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeer787878");
         }
         return allUser;
       } else

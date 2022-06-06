@@ -91,6 +91,7 @@ class _SearchResultWidgetState extends State<SearchResultWidget> {
                                 name: widget.nameOfClient,
                                 date: widget.dateOfCollection,
                                 code: widget.code,
+                                Siana_Code: "",
                                 cash: widget.cash,
                                 maintenance: false,
                                 saved: widget.saved,

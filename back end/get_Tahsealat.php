@@ -3,12 +3,7 @@
 class API{
 	function Select(){
 
-$host = "SG2NWPLS14SQL-v09.shr.prod.sin2.secureserver.net";
-$username="lifenew";
-$password="Mido@445544";
-$database="newlife2020";
-$connectionInfo = array( "Database"=>"newlife2020", "UID"=>"lifenew", "PWD"=>"Mido@445544","CharacterSet" => "UTF-8");
-$conn = sqlsrv_connect($host,$connectionInfo);
+include "connect.php";
 		 $sql;
 		$Fann_ID =$_GET['id'];
 		if($Fann_ID != '-1')

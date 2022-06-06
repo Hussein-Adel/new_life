@@ -3,15 +3,10 @@
 class API{
 	function Select(){
 
-$host = "SG2NWPLS14SQL-v09.shr.prod.sin2.secureserver.net";
-$username="lifenew";
-$password="Mido@445544";
-$database="newlife2020";
-$connectionInfo = array( "Database"=>"newlife2020", "UID"=>"lifenew", "PWD"=>"Mido@445544","CharacterSet" => "UTF-8");
-$conn = sqlsrv_connect($host,$connectionInfo);
+include "connect.php";
 		 $Code =$_GET['code'];	
 		
-		  			$sql = "select ID,DateOfDue,Cash,CustID,Custnm,Paid,AlarmState,Mokadima,QestID,InvTot from dbo.TanbeahatFatra_Open2 where CustCode	 = '$Code' ";
+		  			$sql = "select ID,DateOfDue,PaidDate,Cash,CustID,Custnm,Paid,AlarmState,Mokadima,QestID,InvTot from dbo.TanbeahatFatra_Open2 where CustCode	 = '$Code' ";
     
     $params = array();
     $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
@@ -31,7 +26,8 @@ $users = array();
 				'Mokadima'=>$row['Mokadima'],
 				'QestID'=>$row['QestID'],
 				'InvTot'=>$row['InvTot'],
-				);
+				'PaidDate'=>$row['PaidDate'],
+                                );
 	   $i =$i +1;
         }
         return json_encode($search);

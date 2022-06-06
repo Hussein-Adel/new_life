@@ -161,6 +161,9 @@ class _CollectorsState extends State<Collectors> {
         } else if (someUser[i].fanniName == '') {
           someUser[i].fanniName = ' ';
           searchUser.add(someUser[i]);
+        } else if (someUser[i].Siana_Code == '') {
+          someUser[i].Siana_Code = ' ';
+          searchUser.add(someUser[i]);
         } else if (someUser[i].date == '') {
           someUser[i].date = ' ';
           searchUser.add(someUser[i]);
@@ -206,6 +209,9 @@ class _CollectorsState extends State<Collectors> {
           searchUser.add(someUser[i]);
         } else if (someUser[i].fanniName == '') {
           someUser[i].fanniName = ' ';
+          searchUser.add(someUser[i]);
+        } else if (someUser[i].Siana_Code == '') {
+          someUser[i].Siana_Code = ' ';
           searchUser.add(someUser[i]);
         } else if (someUser[i].date == '') {
           someUser[i].date = ' ';
@@ -253,6 +259,9 @@ class _CollectorsState extends State<Collectors> {
         } else if (someUser[i].fanniName == '') {
           someUser[i].fanniName = ' ';
           searchUser.add(someUser[i]);
+        } else if (someUser[i].Siana_Code == '') {
+          someUser[i].Siana_Code = ' ';
+          searchUser.add(someUser[i]);
         } else if (someUser[i].date == '') {
           someUser[i].date = ' ';
           searchUser.add(someUser[i]);
@@ -298,6 +307,9 @@ class _CollectorsState extends State<Collectors> {
           searchUser.add(someUser[i]);
         } else if (someUser[i].fanniName == '') {
           someUser[i].fanniName = ' ';
+          searchUser.add(someUser[i]);
+        } else if (someUser[i].Siana_Code == '') {
+          someUser[i].Siana_Code = ' ';
           searchUser.add(someUser[i]);
         } else if (someUser[i].date == '') {
           someUser[i].date = ' ';
@@ -418,6 +430,7 @@ class _CollectorsState extends State<Collectors> {
                   name: data[3],
                   date: data[4],
                   code: data[0],
+                  Siana_Code: "For Siana Code In User Model",
                   cash: data[1],
                   maintenance: false,
                   client: false,

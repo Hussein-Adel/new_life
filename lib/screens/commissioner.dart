@@ -93,6 +93,9 @@ class _CommissionerState extends State<Commissioner> {
           } else if (someUser[i].fanniName == '') {
             someUser[i].fanniName = ' ';
             allUser.add(someUser[i]);
+          } else if (someUser[i].Siana_Code == '') {
+            someUser[i].Siana_Code = ' ';
+            allUser.add(someUser[i]);
           } else if (someUser[i].date == '') {
             someUser[i].date = ' ';
             allUser.add(someUser[i]);
@@ -145,6 +148,9 @@ class _CommissionerState extends State<Commissioner> {
           } else if (someUser[i].fanniName == '') {
             someUser[i].fanniName = ' ';
             searchUser.add(someUser[i]);
+          } else if (someUser[i].Siana_Code == '') {
+            someUser[i].Siana_Code = ' ';
+            searchUser.add(someUser[i]);
           } else if (someUser[i].date == '') {
             someUser[i].date = ' ';
             searchUser.add(someUser[i]);
@@ -196,6 +202,9 @@ class _CommissionerState extends State<Commissioner> {
         } else if (someUser[i].fanniName == '') {
           someUser[i].fanniName = ' ';
           searchUser.add(someUser[i]);
+        } else if (someUser[i].Siana_Code == '') {
+          someUser[i].Siana_Code = ' ';
+          searchUser.add(someUser[i]);
         } else if (someUser[i].date == '') {
           someUser[i].date = ' ';
           searchUser.add(someUser[i]);
@@ -242,6 +251,9 @@ class _CommissionerState extends State<Commissioner> {
           searchUser.add(someUser[i]);
         } else if (someUser[i].fanniName == '') {
           someUser[i].fanniName = ' ';
+          searchUser.add(someUser[i]);
+        } else if (someUser[i].Siana_Code == '') {
+          someUser[i].Siana_Code = ' ';
           searchUser.add(someUser[i]);
         } else if (someUser[i].date == '') {
           someUser[i].date = ' ';
@@ -290,6 +302,9 @@ class _CommissionerState extends State<Commissioner> {
           searchUser.add(someUser[i]);
         } else if (someUser[i].fanniName == '') {
           someUser[i].fanniName = ' ';
+          searchUser.add(someUser[i]);
+        } else if (someUser[i].Siana_Code == '') {
+          someUser[i].Siana_Code = ' ';
           searchUser.add(someUser[i]);
         } else if (someUser[i].date == '') {
           someUser[i].date = ' ';

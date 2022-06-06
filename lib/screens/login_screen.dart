@@ -98,8 +98,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             email: email, password: password);
 
                         if (user != null) {
+                          print('gggggggggggggggggggggggggggggggg');
                           User = (await Users().getLoginIDFromDataBase(email))!;
-
+                          print('gggggggggggggggggggggggggggggggg2');
+                          print(User);
+                          print('gggggggggggggggggggggggggggggggg3');
                           if (User[2].toString() == '0' ||
                               User[2].toString() == 'null') {
                             await Users().signLogin(email);
@@ -137,6 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           }
                         }
                       } catch (e) {
+                        print('a7777777777777777777777777777777777777777a');
                         print(e);
 
                         setState(() {
@@ -145,6 +149,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
                         List<String> FirebaseAuthException =
                             e.toString().split(']');
+                        print('a7777777777777777777777777777777777777777a2');
+
+                        kToastErrorMessage(FirebaseAuthException);
+                        print('a7777777777777777777777777777777777777777a3');
+
                         kToastErrorMessage(FirebaseAuthException[1]);
                       }
                     },

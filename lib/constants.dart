@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class ServerVars {
-  static const String Global_BASE_URL = "http://new-life.life/";
+  static const String Global_BASE_URL =
+      "http://anaselsyad-001-site1.htempurl.com/";
 
   ///Mustafa's work
   static const String addUser = "Add_User.php/";

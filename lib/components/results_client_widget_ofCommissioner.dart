@@ -224,31 +224,29 @@ class _ResultsClientWidgetOFCommissionerState
                                               fontSize: 19,
                                             ),
                                           ),
-                                          subtitle: Text(
-                                            '',
-                                            style: TextStyle(
-                                              fontSize: 19,
-                                            ),
-                                          ),
-                                          trailing: Text(
-                                            '',
-                                            style: TextStyle(
-                                              fontSize: 19,
-                                            ),
-                                          ),
                                           children: [
                                             Column(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
-                                                Text(
-                                                  'ميعاد القسط : ${Tanbeahat[index].Date}',
-                                                  textDirection:
-                                                      TextDirection.rtl,
-                                                  style: TextStyle(
-                                                    fontSize: 19,
-                                                  ),
-                                                ),
+                                                Tanbeahat[index].PaidDate !=
+                                                        "null"
+                                                    ? Text(
+                                                        'تاريخ السداد : ${Tanbeahat[index].PaidDate}',
+                                                        textDirection:
+                                                            TextDirection.rtl,
+                                                        style: TextStyle(
+                                                          fontSize: 19,
+                                                        ),
+                                                      )
+                                                    : Text(
+                                                        'ميعاد القسط : ${Tanbeahat[index].Date}',
+                                                        textDirection:
+                                                            TextDirection.rtl,
+                                                        style: TextStyle(
+                                                          fontSize: 19,
+                                                        ),
+                                                      ),
                                                 Text(
                                                   'المبلغ المطلوب للسداد: ${Tanbeahat[index].Cash}',
                                                   textDirection:
@@ -316,6 +314,7 @@ class _ResultsClientWidgetOFCommissionerState
                                 name: widget.allUser[index].username,
                                 date: widget.allUser[index].date,
                                 code: widget.allUser[index].fanniName,
+                                Siana_Code: widget.allUser[index].Siana_Code,
                                 cash: widget.allUser[index].phone,
                                 maintenance: false,
                                 client: true,

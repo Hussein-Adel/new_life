@@ -3,12 +3,7 @@
 class API{
 	function Select(){
 
-$host = "SG2NWPLS14SQL-v09.shr.prod.sin2.secureserver.net";
-$username="lifenew";
-$password="Mido@445544";
-$database="newlife2020";
-$connectionInfo = array( "Database"=>"newlife2020", "UID"=>"lifenew", "PWD"=>"Mido@445544","CharacterSet" => "UTF-8");
-$conn = sqlsrv_connect($host,$connectionInfo);
+include "connect.php";
 		 $name =$_GET['name'];	
 		
 		list($ID, $MyName) = explode(',', $name);
@@ -16,11 +11,11 @@ $conn = sqlsrv_connect($host,$connectionInfo);
 		if($ID != '-1')
 		{
 
-    		$sql = "select Phone2,ManNm,ComName,Address,Phone,Mobile,fanniNm,Installdate from AllCustData_Vi where ComName LIKE N'$test' and MandoobID = '$ID' ";
+    		$sql = "select Phone2,ManNm,ComName,Address,Phone,Mobile,fanniNm,Installdate,Siana_Code from AllCustData_Vi where ComName LIKE N'$test' and MandoobID = '$ID' ";
 		}
 		else{  
 
-			$sql = "select Phone2,ComName,ManNm,Address,Phone,Mobile,fanniNm,Installdate from AllCustData_Vi where ComName LIKE N'$test' ";
+			$sql = "select Phone2,ComName,ManNm,Address,Phone,Mobile,fanniNm,Installdate,Siana_Code from AllCustData_Vi where ComName LIKE N'$test' ";
 		}
 
     
@@ -41,7 +36,8 @@ $users = array();
 				 	'fanniNm'=>$row['fanniNm'],
 				 	'installdate'=>$row['Installdate'],
 				 	'manNm'=>$row['ManNm'],
-			 );
+			 		'Siana_Code'=>$row['Siana_Code'],
+				 );
 	   $i =$i +1;
         }
         return json_encode($users);

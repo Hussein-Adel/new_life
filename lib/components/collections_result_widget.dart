@@ -90,6 +90,8 @@ class _CollectionsResultsWidgetState extends State<CollectionsResultsWidget> {
                                       name: widget.Collections[index].Custname,
                                       date: widget.Collections[index].Date,
                                       code: widget.Collections[index].Qest_ID,
+                                      Siana_Code:
+                                          "For Siana Code In User Model",
                                       cash: widget.Collections[index].Qest_Val,
                                       maintenance: false,
                                       client: false,
@@ -136,6 +138,8 @@ class _CollectionsResultsWidgetState extends State<CollectionsResultsWidget> {
                                           date: widget.Collections[index].Date,
                                           code:
                                               widget.Collections[index].Qest_ID,
+                                          Siana_Code:
+                                              "For Siana Code In User Model",
                                           cash: widget
                                               .Collections[index].Qest_Val,
                                           maintenance: true,
@@ -219,6 +223,7 @@ class _CollectionsResultsWidgetState extends State<CollectionsResultsWidget> {
                                     name: widget.Sianat[index].Custname,
                                     date: widget.Sianat[index].Other_Siana,
                                     code: widget.Sianat[index].Cost,
+                                    Siana_Code: "For Siana Code In User Model",
                                     cash: widget.Sianat[index].Paid_Cash,
                                     maintenance: true,
                                     client: false,

@@ -17,6 +17,7 @@ class CustomDialog extends StatefulWidget {
   bool saved;
   int saved_counter;
   String code;
+  String Siana_Code;
   String CustID;
   String name;
   String cash;
@@ -32,6 +33,7 @@ class CustomDialog extends StatefulWidget {
       required this.saved_counter,
       required this.cash,
       required this.code,
+      required this.Siana_Code,
       required this.CustID,
       required this.date,
       required this.name,
@@ -198,6 +200,14 @@ class _CustomDialogState extends State<CustomDialog> {
                           'الكود : ${widget.saved_counter} ',
                           style: kTextStyle2,
                         ),
+                        widget.Siana_Code == ''
+                            ? SizedBox()
+                            : widget.Siana_Code == 'null'
+                                ? SizedBox()
+                                : Text(
+                                    'كود الصيانة : ${widget.Siana_Code} ',
+                                    style: kTextStyle2,
+                                  ),
                         Text(
                           'العنوان : ${widget.address}',
                           style: kTextStyle2,
